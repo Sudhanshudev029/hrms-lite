@@ -1,0 +1,306 @@
+.page {
+  padding: 32px;
+  max-width: 1200px;
+}
+
+.pageHeader {
+  margin-bottom: 24px;
+}
+
+.pageTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.4px;
+}
+
+.pageSubtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin-top: 3px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.cardHeader {
+  padding: 18px 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.cardTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.cardSubtitle {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 3px;
+}
+
+.cardBody {
+  padding: 20px;
+}
+
+/* Mark attendance form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.required {
+  color: #dc2626;
+  margin-left: 2px;
+}
+
+.input,
+.select {
+  padding: 9px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #0f172a;
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  font-family: inherit;
+  width: 100%;
+}
+
+.input:focus,
+.select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgb(99 102 241 / 0.1);
+}
+
+.statusRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.statusOption {
+  position: relative;
+}
+
+.statusOption input[type='radio'] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.statusLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 2px solid #e2e8f0;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s, color 0.15s;
+  color: #64748b;
+}
+
+.statusOption input:checked + .statusLabel.present {
+  border-color: #059669;
+  background-color: #ecfdf5;
+  color: #059669;
+}
+
+.statusOption input:checked + .statusLabel.absent {
+  border-color: #dc2626;
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.statusLabel:hover {
+  border-color: #94a3b8;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 10px;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.15s, box-shadow 0.15s;
+  font-family: inherit;
+  margin-top: 4px;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background-color: #4f46e5;
+  box-shadow: 0 4px 12px rgb(99 102 241 / 0.3);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Records section */
+.recordsHeader {
+  padding: 18px 20px;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filtersRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filterSelect,
+.filterInput {
+  padding: 7px 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+  font-size: 13px;
+  color: #374151;
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.15s;
+  font-family: inherit;
+}
+
+.filterSelect:focus,
+.filterInput:focus {
+  border-color: #6366f1;
+}
+
+.clearBtn {
+  font-size: 13px;
+  color: #6366f1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  padding: 4px 0;
+}
+
+.clearBtn:hover {
+  text-decoration: underline;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background-color: #fafafa;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.table td {
+  padding: 13px 16px;
+  font-size: 14px;
+  color: #334155;
+  border-bottom: 1px solid #f8fafc;
+  vertical-align: middle;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr:hover td {
+  background-color: #fafafa;
+}
+
+.empName {
+  font-weight: 600;
+  color: #0f172a;
+  font-size: 13px;
+}
+
+.empId {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 2px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+.dept {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: #475569;
+  background: #f1f5f9;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.dateCell {
+  font-size: 13px;
+  color: #475569;
+  white-space: nowrap;
+}
+
+.recordCount {
+  font-size: 13px;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
